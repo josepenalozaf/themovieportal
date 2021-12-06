@@ -1,7 +1,7 @@
 The Movie Portal - by Jose Peñaloza
 ===
 
-In order to have the website working, just edit the `env.php` file inside the root of the theme and put your Movie DB API key instead of `YOUR_API_KEY_HERE` and done!.
+In order to have the website working, just edit the `env.php` file inside the root of the theme and put your Movie DB API key instead of `YOUR_API_KEY_HERE` and done!
 
 About the tools I've used
 ---------------
