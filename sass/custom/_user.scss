@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;700&display=swap');
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: $color__background-body;
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 1.6rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  align-items: center;
+  background: $color__background-element;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.9);
+  color: $color__text-main;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+
+  .title {
+    color: inherit;
+
+    & > * {
+      margin: 0;
+    }
+  }
+
+  .description {
+    margin: 0;
+  }
+
+  .search {
+    align-items: center;
+    display: flex;
+    gap: 0.5em;
+
+    input {
+      background: $color__background-input;
+      text-indent: 0.5em;
+      width: 25ch;
+    }
+
+    button {
+      background: $color__background-button;
+      color: $color__text-main;
+      cursor: pointer;
+    }
+  }
+}
+
+.filter {
+  input {
+    background: $color__background-input;
+    text-indent: 0.5em;
+  }
+}
+
+main {
+  padding: 2em 0;
+
+  .home-category {
+    border-bottom: solid 1px $color__text-main;
+    margin: 0 0 2em 1em;
+    padding: 1em 1em 1em 0;
+  }
+
+  h3 {
+    color: $color__text-secondary;
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  h4 {
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .card-wrapper {
+    display: none;
+
+    &.shown {
+      display: initial;
+    }
+  }
+
+  .cards {
+    display: grid;
+    column-gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: auto;
+    row-gap: 1em;
+    width: 80%;
+
+    .card {
+      background: $color__background-element;
+      border-bottom: solid 1px rgba(255, 255, 255, 0.3);
+      border-radius: 5px;
+      border-width: 1px;
+      box-shadow: 0 22px 70px 4px rgba(0, 0, 0, 0.56);
+      overflow: hidden;
+      padding-bottom: 2em;
+      -webkit-transition: all 0.5s 0s ease;
+      -moz-transition: all 0.5s 0s ease;
+      -o-transition: all 0.5s 0s ease;
+      transition: all 0.5s 0s ease;
+
+      &:hover {
+        filter: brightness(1.4);
+      }
+    }
+
+    picture img {
+      width: 100%;
+    }
+
+    header {
+      padding: 0 1.6em;
+
+      h5 {
+        color: $color__text-main;
+        font-size: 1.7rem;
+        font-weight: bold;
+      }
+    }
+
+    footer {
+      padding: 0 1.6em;
+
+      .date,
+      .genre {
+        color: $color__text-secondary;
+        margin: 0;
+        padding-bottom: 0.5em;
+
+        span {
+          color: $color__text-main;
+          display: block;
+          padding-left: 0.5em;
+        }
+      }
+    }
+  }
+
+  .movies-list {
+    .year,
+    .month {
+      padding: 0 2em;
+    }
+  }
+
+  .details {
+    margin: auto;
+    width: 80%;
+
+    .trailer {
+      height: 0;
+      padding-bottom: 56.25%;
+      position: relative;
+      width: 100%;
+
+      iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+
+    .description {
+      display: inline-block;
+      width: 100%;
+
+      img {
+        float: left;
+        max-width: 90%;
+        padding-right: 2em;
+        width: 200px;
+      }
+
+      h4 {
+        display: inline;
+      }
+
+      p {
+        text-indent: 1em;
+      }
+
+      a {
+        color: $color__text-secondary;
+        text-decoration: underline;
+      }
+    }
+
+    .companies {
+      display: grid;
+      column-gap: 1em;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      row-gap: 1em;
+
+      .company {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+        &.text {
+          border: solid 1px #080808;
+        }
+      }
+    }
+
+    .reviews {
+      .review {
+        border-bottom: solid 1px #ccc;
+        margin-bottom: 3em;
+
+        .user {
+          font-size: 1.1em;
+          margin-bottom: 0.6em;
+
+          .username {
+            color: lightblue;
+            font-weight: bold;
+          }
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    .gallery {
+      display: grid;
+      column-gap: 1em;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      row-gap: 1em;
+    }
+
+    .movie-actors,
+    .actor-movies {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      width: 100%;
+    }
+  }
+}
+
+.site-footer {
+  align-items: center;
+  background: $color__background-element;
+  box-shadow: 0px 0px -12px rgba(0, 0, 0, 0.9);
+  color: $color__text-main;
+  display: flex;
+  justify-content: center;
+  padding: 1em 2em;
+  width: 100%;
+
+  .site-info {
+    margin: 1em 0;
+  }
+}
+
+.loading {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+
+  &.hidden {
+    display: none;
+  }
+
+  .icon-wrapper {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+
+    .icon {
+      animation: loadingRotation infinite 3s linear;
+      height: 10em;
+      width: 10em;
+    }
+
+    p {
+      font-size: 1.7em;
+      font-weight: bold;
+    }
+  }
+}
+
+@keyframes loadingRotation {
+  from {
+    transform: rotate(0)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+@media (min-width: 1101px) and (max-width: 1400px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr !important;
+  }
+
+  .movie-actors,
+  .actor-movies {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr !important;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1100px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+  }
+
+  .movie-actors,
+  .actor-movies {
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+  }
+
+  .companies {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr !important;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 750px) {
+  .cards {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .movie-actors,
+  .actor-movies {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .companies {
+    grid-template-columns: 1fr 1fr 1fr !important;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}

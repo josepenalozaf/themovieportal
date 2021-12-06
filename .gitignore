@@ -1,0 +1,5 @@
+# Node files
+node_modules/
+
+# Visual Studio Code extensions files
+/.favorites.json
