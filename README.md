@@ -1,7 +1,13 @@
 The Movie Portal - by Jose Peñaloza
 ===
 
-In order to have the website working, just edit the `env.php` file inside the root of the theme and put your Movie DB API key instead of `YOUR_API_KEY_HERE` and done!
+In order to have the website working, just follow the next steps:
+
+1. Do a clean installation of WordPress.
+2. Clone this repository into the `wp-content/themes/` folder using the command `git clone https://github.com/josepenalozaf/themovieportal.git themovieportal`
+3. Edit the `env.php` file inside the theme folder and put your Movie DB API key instead of `YOUR_API_KEY_HERE`
+3. Activate the theme on your WordPress dashboard in `Appearance > Themes`
+4. You're all set, you can go and check your WordPress site now!
 
 About the tools I've used
 ---------------
